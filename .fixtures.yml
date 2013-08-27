@@ -1,0 +1,6 @@
+fixtures:
+  repositories:
+    epel:  "http://github.com/justinclayton/puppet-module-epel.git"
+    redis: "http://github.com/justinclayton/puppet-module-redis.git"
+  symlinks:
+    hubot: "#{source_dir}"

@@ -1,0 +1,9 @@
+---
+language: ruby
+script: "bundle exec rake spec"
+rvm:
+  - 1.9.3
+notifications:
+  hipchat:
+    rooms:
+      secure: "VeuwoFjE0yknPcQW2Cp+YZNc/0J3c4t5nNINtSmmaUoUKCd+WdUcxGG8jhZlDE5Y7e4KYrfR/ePOW24lbVEQthaLQkg2HWUplfoIR7sp9tERPxp3Y5CbscV+TqcWV0ZlkNtRWEsBCs9U75BjUODdcqfTa/YmLhe95TNDL5v+pmk="
