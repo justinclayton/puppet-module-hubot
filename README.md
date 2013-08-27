@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/justinclayton/puppet-module-hubot.png?branch=master)](https://travis-ci.org/justinclayton/puppet-module-hubot)
+
 puppet-module-hubot
 ===================
 
