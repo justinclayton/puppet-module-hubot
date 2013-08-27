@@ -62,12 +62,6 @@ describe 'hubot', :type => :class do
       })
     end
 
-    it 'should have a sysconfig file' do
-      should contain_file('/etc/sysconfig/hubot').with({
-        :ensure => 'file'
-      })
-    end
-
     it 'should manage the hubot service' do
       should contain_service('hubot').with_ensure('running').with_enable('true')
     end

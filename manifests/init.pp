@@ -57,12 +57,6 @@ class hubot(
     content => template('hubot/hubot.init.erb'),
   }
 
-  # env configs
-  file { '/etc/sysconfig/hubot':
-    ensure  => file,
-    content => template('hubot/hubot.sysconfig.erb'),
-  }
-
   if ! defined( File[$root_dir] ) {
     file { $root_dir:
       ensure => directory,
