@@ -7,6 +7,7 @@
 ROOT_DIR="<%= @root_dir %>"
 DAEMON="${ROOT_DIR}/bin/hubot"
 DAEMON_ADAPTER="<%= @adapter %>"
+DAEMON_OPTIONS="--alias"
 LOG_FILE="${ROOT_DIR}/hubot.log"
 HUBOT_ENV_FILE="${ROOT_DIR}/hubot.conf"
 USER="<%= @user %>"
@@ -19,7 +20,7 @@ SCRIPTNAME=/etc/init.d/$NAME
 case "$1" in
 start)
         echo -n $"Starting $NAME: "
-        runuser -l $USER -c "source $HUBOT_ENV_FILE && cd $ROOT_DIR; $DAEMON -a $DAEMON_ADAPTER" >> $LOG_FILE 2>&1 &
+        runuser -l $USER -c "source $HUBOT_ENV_FILE && cd $ROOT_DIR; $DAEMON -a $DAEMON_ADAPTER $DAEMON_OPTIONS" >> $LOG_FILE 2>&1 &
         sleep 3
         PID=$(ps aux | grep node | head -1 | awk '{print $2}')
 
